@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="presenter-deck" content="1">
+  <meta name="deck:title" content="Field Notes: Shipping a Mac App">
+  <meta name="deck:duration" content="10m">
+  <title>Field Notes: Shipping a Mac App</title>
+<style id="presenter-deck-runtime">
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:#000}
+.deck{position:fixed!important;left:50%;top:50%;width:1920px!important;height:1080px!important;transform:translate(-50%,-50%) scale(var(--deck-scale,1))!important;transform-origin:center center}
+.deck>section.slide{position:absolute!important;inset:0!important;width:1920px!important;height:1080px!important;overflow:hidden!important;box-sizing:border-box}
+.deck>section.slide:not(.is-active){display:none!important}
+.deck>section.slide>aside.notes{display:none!important}
+</style>
+  <style>
+    body { background: #12100e; }
+    .slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 160px;
+      background: #f4efe6;
+      color: #1d1a16;
+      font-family: "Iowan Old Style", "Palatino", Georgia, serif;
+    }
+    .slide.dark { background: #1d1a16; color: #f4efe6; }
+    .kicker {
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 28px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #b4532a;
+      margin: 0 0 32px;
+    }
+    h1 { font-size: 136px; line-height: 1.02; margin: 0; font-weight: 600; letter-spacing: -0.02em; }
+    h2 { font-size: 88px; line-height: 1.08; margin: 0 0 56px; font-weight: 600; }
+    p.lede { font-size: 44px; line-height: 1.4; max-width: 1300px; margin: 48px 0 0; opacity: 0.8; }
+    .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 64px; }
+    .cols h3 { font-size: 44px; margin: 0 0 20px; }
+    .cols p { font-size: 32px; line-height: 1.45; margin: 0; opacity: 0.8; }
+    .stat { font-size: 320px; line-height: 1; font-weight: 600; color: #b4532a; margin: 0; }
+    .slide.is-active h1, .slide.is-active h2, .slide.is-active .stat {
+      animation: rise 0.6s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
+    .folio {
+      position: absolute; left: 160px; bottom: 64px;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 22px; opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <main class="deck">
+
+    <section class="slide dark" data-title="Title">
+      <p class="kicker">Field notes · 2026</p>
+      <h1>Shipping a Mac app<br>in six weeks</h1>
+      <p class="lede">What worked, what didn't, and what I'd do differently.</p>
+      <aside class="notes">Welcome everyone. Introduce yourself in one sentence. Set expectations: ten minutes, questions at the end.</aside>
+    </section>
+
+    <section class="slide" data-title="Three lessons">
+      <p class="kicker">Lessons</p>
+      <h2>Three things that mattered</h2>
+      <div class="cols">
+        <div><h3>Scope hard</h3><p>One feature, done well, beat five half-finished ones.</p></div>
+        <div><h3>Sandbox first</h3><p>Prototype the riskiest entitlement before writing UI.</p></div>
+        <div><h3>Ship ugly</h3><p>TestFlight in week two; polish came from real feedback.</p></div>
+      </div>
+      <span class="folio">02</span>
+      <aside class="notes">
+        <ul>
+          <li><strong>Scope:</strong> mention the cut features list, about 14 items.</li>
+          <li><strong>Sandbox:</strong> the folder bookmark story; cost a week.</li>
+          <li><strong>Ship ugly:</strong> first 20 testers found the real bugs in 48 hours.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="slide" data-title="The number">
+      <p class="kicker">Result</p>
+      <p class="stat">1,240</p>
+      <p class="lede">paid downloads in the first month, with zero ad spend.</p>
+      <span class="folio">03</span>
+      <aside class="notes">
+        <p>Pause on the number before saying anything. Let it land.</p>
+        <p>Context matters here, so walk through where it came from. Roughly 60% of downloads came from a single post on a Mac-focused forum in week one, which I didn't plan; someone from the beta shared it. The remaining 40% was a long tail: App Store search (mostly for "rename files"), two newsletter mentions, and word of mouth.</p>
+        <p>If asked about revenue: one-time price of $14.99, so around $13k after Apple's cut under the Small Business Program. Don't round up.</p>
+        <p>If asked about refunds: 11 so far, mostly people expecting it to rename files in iCloud Drive without granting access first. That's a UX fix on the roadmap.</p>
+        <p>Likely question: "Would you do subscriptions?" Answer: not for a utility this size. People are visibly relieved when they see a one-time price, and it shows in the reviews.</p>
+      </aside>
+    </section>
+
+    <section class="slide dark" data-title="Thanks">
+      <h1>Thank you.</h1>
+      <p class="lede">Questions?</p>
+      <aside class="notes">Open the floor. If there's silence, ask how many people have shipped something to the App Store.</aside>
+    </section>
+
+  </main>
+<script id="presenter-deck-runtime-js">
+(function () {
+  var root = document.documentElement;
+  var deck = document.querySelector('.deck');
+  if (!deck) return;
+  function fit() {
+    deck.style.setProperty('--deck-scale', Math.min(innerWidth / 1920, innerHeight / 1080));
+  }
+  addEventListener('resize', fit);
+  fit();
+  // Inside the presenter app, the host drives navigation and sets .is-active itself.
+  if (root.hasAttribute('data-presenter-host')) return;
+  var slides = Array.prototype.filter.call(deck.children, function (el) {
+    return el.matches('section.slide');
+  });
+  if (!slides.length) return;
+  var current = -1;
+  function go(n) {
+    n = Math.max(0, Math.min(slides.length - 1, n));
+    if (n === current) return;
+    if (current >= 0) slides[current].classList.remove('is-active');
+    current = n;
+    slides[current].classList.add('is-active');
+    try { history.replaceState(null, '', '#' + (current + 1)); } catch (e) {}
+  }
+  var NEXT = ['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter', 'n'];
+  var PREV = ['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace', 'p'];
+  addEventListener('keydown', function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if (NEXT.indexOf(e.key) >= 0) go(current + 1);
+    else if (PREV.indexOf(e.key) >= 0) go(current - 1);
+    else if (e.key === 'Home') go(0);
+    else if (e.key === 'End') go(slides.length - 1);
+    else if (e.key === 'f' && root.requestFullscreen) {
+      if (document.fullscreenElement) document.exitFullscreen();
+      else root.requestFullscreen();
+    }
+    else return;
+    e.preventDefault();
+  });
+  go((parseInt(location.hash.slice(1), 10) || 1) - 1);
+})();
+</script>
+</body>
+</html>
