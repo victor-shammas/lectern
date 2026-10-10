@@ -32,13 +32,13 @@
       <ul>
         <li>Lectern has no accounts, no servers, no analytics and no ads.</li>
         <li>Your decks, your notes and the backups Lectern makes stay on your Mac.</li>
-        <li>The only connection Lectern itself makes is a daily check for updates.</li>
-        <li>Ask Claude sends the current slide, without your notes, to Anthropic through Claude Code, under your own Claude account, and only when you use it. Claude never receives any speaker notes.</li>
+        <li>The only connection Lectern itself makes is a daily check for updates (not in the Mac App Store version, which the App Store updates).</li>
+        <li>Ask Claude (in the version from this website) sends the current slide, without your notes, to Anthropic through Claude Code, under your own Claude account, and only when you use it. Claude never receives any speaker notes.</li>
         <li>I (the developer) never receive any of your data.</li>
       </ul>
     </div>
 
-    <p>This policy explains what the Lectern app for macOS ("Lectern", "the app") reads, what it stores, what goes over the network, and what it never does. It covers the version you download from this website. Lectern is made by Victor Shammas, an independent developer ("I", "me").</p>
+    <p>This policy explains what the Lectern app for macOS ("Lectern", "the app") reads, what it stores, what goes over the network, and what it never does. It covers both the version you download from this website and the Mac App Store version; the two differences are described at the end of section 3. Lectern is made by Victor Shammas, an independent developer ("I", "me").</p>
 
     <h2>1. What Lectern reads</h2>
     <p>Lectern opens the HTML slide decks you choose: through File › Open, by dropping a deck on its window or Dock icon, or with "Open With" in the Finder. It shows the deck's slides, and reads the speaker notes in it. Files the deck itself refers to, such as images next to it, load as they would in a web browser. Lectern doesn't look at anything else on your Mac.</p>
@@ -66,6 +66,8 @@
             <td data-label="When">Only when you click <em>Ask Claude</em>.</td></tr>
       </tbody>
     </table>
+
+    <p><strong>Mac App Store version.</strong> The Mac App Store version is updated by the App Store, so it makes no update check of its own, and it doesn't include Ask Claude. It runs in Apple's App Sandbox, so it can only open the decks you choose and read the folders you allow. Everything else in this policy applies to it as written.</p>
 
     <h2>4. Ask Claude</h2>
     <p>Ask Claude runs Claude Code, Anthropic's command-line program, that you installed on your Mac, under your own Claude account. Lectern starts it only when you send a request from Ask Claude. Lectern prepares a temporary folder for it with:</p>
