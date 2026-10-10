@@ -33,7 +33,7 @@
         <li>Lectern has no accounts, no servers, no analytics and no ads.</li>
         <li>Your decks, your notes and the backups Lectern makes stay on your Mac.</li>
         <li>The only connection Lectern itself makes is a daily check for updates.</li>
-        <li>Ask Claude sends the current slide, with a little context, to Anthropic through Claude Code, under your own Claude account, and only when you use it.</li>
+        <li>Ask Claude sends the current slide, without your notes, to Anthropic through Claude Code, under your own Claude account, and only when you use it. Claude never receives any speaker notes.</li>
         <li>I (the developer) never receive any of your data.</li>
       </ul>
     </div>
@@ -70,11 +70,12 @@
     <h2>4. Ask Claude</h2>
     <p>Ask Claude runs Claude Code, Anthropic's command-line program, that you installed on your Mac, under your own Claude account. Lectern starts it only when you send a request from Ask Claude. Lectern prepares a temporary folder for it with:</p>
     <ul>
-      <li>a copy of the current slide, with its speaker notes taken out, plus the deck's styles from its <code>&lt;head&gt;</code>;</li>
-      <li>a short outline: the deck's title, the titles of its slides, and the current slide's notes, as context only;</li>
-      <li>the Presenter Deck spec, and your instruction.</li>
+      <li>a copy of the current slide, with its speaker notes taken out, together with a copy of the deck's <code>&lt;head&gt;</code> (its styles and scripts). When you ask for new slides, Claude also gets an empty copy of the deck's <code>&lt;head&gt;</code> to write them into;</li>
+      <li>the deck's title and the list of its slide titles;</li>
+      <li>the Presenter Deck spec;</li>
+      <li>the instruction you typed.</li>
     </ul>
-    <p>Claude Code sends what it needs from that folder to Anthropic to get Claude's answer, under <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and the terms of your Claude plan. The rest of your deck, including the other slides' notes, is not in the folder. Lectern starts Claude Code without your own Claude Code settings, hooks or plugins, lets it only read and write files in that folder, and deletes the folder when it finishes. Lectern never sends anything to me, and it never uses an Anthropic API key.</p>
+    <p>Claude Code sends what it needs from that folder to Anthropic to get Claude's answer, under <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a> and the terms of your Claude plan. Nothing else from your deck is in the folder: no other slides, and no speaker notes at all. Lectern starts Claude Code without your own Claude Code settings, hooks or plugins, lets it only read and write files in that folder, and deletes the folder when it finishes. Lectern never sends anything to me, and it never uses an Anthropic API key.</p>
 
     <h2>5. What Lectern never does</h2>
     <ul>

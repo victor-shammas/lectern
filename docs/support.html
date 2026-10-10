@@ -163,7 +163,7 @@
     <details>
       <summary>What does Claude see, and what can it change?</summary>
       <ul>
-        <li>Claude works in a temporary folder on a copy of the current slide, with its speaker notes taken out, and the deck's styles. For context, it also gets the deck's title, the titles of its slides, the current slide's notes and the Presenter Deck spec. It never sees the deck file itself or the other slides' notes.</li>
+        <li>Claude works in a temporary folder that holds a copy of the current slide with its speaker notes taken out, a copy of the deck's <code>&lt;head&gt;</code> (its styles and scripts), the deck's title and slide titles, the Presenter Deck spec and your instruction. When you add slides, it also gets an empty copy of the deck's <code>&lt;head&gt;</code> to write them into. Claude never receives any speaker notes, other slides or the deck file itself.</li>
         <li>It can only read and write files in that folder: no shell, web or other tools. Your own Claude Code settings, hooks and plugins aren't loaded.</li>
         <li>Lectern takes back only the slides. The changed slide gets your notes back word for word, and any notes Claude added to it are dropped. Lectern checks that every other slide is unchanged, backs the deck up, and only then saves it. New slides come with notes Claude wrote for them.</li>
         <li><em>Undo</em> puts back the exact previous file. If the deck has changed since, Undo refuses and points you to the backup.</li>
