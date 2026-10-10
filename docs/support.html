@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Lectern</title>
+<meta name="description" content="Lectern support: installing, presenting with a projector or on one screen, keyboard shortcuts, editing notes and slide text, Ask Claude, backups and updates.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="30" height="30">Lectern</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./" class="hide-sm">Home</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap narrow">
+    <h1>Support</h1>
+    <p>Something not working? The answers below cover almost everything. If not, email <a href="mailto:contact+lectern@victorshammas.com?subject=Lectern%20support">contact+lectern@victorshammas.com</a>. I read every message.</p>
+    <ul class="toc">
+      <li><a href="#start">Getting started</a></li>
+      <li><a href="#show">During a show</a></li>
+      <li><a href="#keys">Keyboard shortcuts</a></li>
+      <li><a href="#notes">Speaker notes</a></li>
+      <li><a href="#text">Editing slide text</a></li>
+      <li><a href="#claude">Ask Claude</a></li>
+      <li><a href="#backups">Backups &amp; updates</a></li>
+      <li><a href="#remove">Removing Lectern</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <h2 id="start">Getting started</h2>
+    <details open>
+      <summary>How do I install Lectern?</summary>
+      <ol>
+        <li>Download <a href="https://github.com/victor-shammas/lectern/releases/latest/download/Lectern.dmg">Lectern.dmg</a>.</li>
+        <li>Open it and drag Lectern into Applications.</li>
+        <li>Open Lectern from Applications. It is signed and notarized by Apple, so it opens without warnings.</li>
+      </ol>
+    </details>
+    <details>
+      <summary>What do I need?</summary>
+      <p>macOS 14 Sonoma or later, on a Mac with Apple silicon. For a show, a second display: a projector, a TV or an AirPlay display. With one screen, Lectern opens in rehearsal mode. For Ask Claude, you also need Claude Code installed and signed in with your Claude subscription.</p>
+    </details>
+    <details>
+      <summary>Which decks does Lectern play?</summary>
+      <p>Slide decks in a single HTML file. It works best with decks that follow the <strong>Presenter Deck</strong> spec: Lectern finds every slide and its speaker notes exactly, and you can edit notes and slide text, and use Ask Claude. reveal.js decks and other HTML slide decks play too. Lectern finds their slides and notes as well as it can, and their notes are read-only.</p>
+    </details>
+    <details>
+      <summary>How do I get Claude to write Presenter Deck decks?</summary>
+      <p>The spec comes with Lectern as a Claude skill. In the Lectern menu, choose <em>Claude Skill</em>, then:</p>
+      <ul>
+        <li><em>Install in Claude Code…</em> copies the skill to <code>~/.claude/skills/presenter-deck</code>.</li>
+        <li><em>Save for Claude.ai…</em> saves <code>presenter-deck.zip</code>. Upload it on claude.ai in Settings › Capabilities › Skills.</li>
+        <li><em>Copy as Prompt</em> puts the spec on the clipboard, to paste into any other assistant.</li>
+      </ul>
+      <p>Then ask for a deck as you normally would, for example "Make a 10-slide Presenter Deck about our field study, with speaker notes."</p>
+    </details>
+    <details>
+      <summary>How do I start a show?</summary>
+      <p>Connect the projector or TV first. Then open the deck: drop it on Lectern's window, click <em>Open…</em>, pick it under <em>Recent</em>, or use File › Open (<kbd>⌘O</kbd>). The show starts at once: the slides go fullscreen on the external display, and the presenter view opens on your Mac. <kbd>F5</kbd> goes back to slide 1. <kbd>Esc</kbd> leaves full screen, and pressed again ends the show.</p>
+    </details>
+
+    <h2 id="show">During a show</h2>
+    <details open>
+      <summary>The slides are on the wrong screen</summary>
+      <p>Show › <em>Swap Displays</em> (<kbd>⇧⌘D</kbd>). Lectern remembers the choice.</p>
+    </details>
+    <details>
+      <summary>I only have one screen. Can I rehearse?</summary>
+      <p>Yes. With one screen, the audience view opens as a small window at the top left, over the presenter view. Everything else works as in a show, including the clicker, the timer and editing. If a display is unplugged during a show, Lectern switches to this mode.</p>
+    </details>
+    <details>
+      <summary>Can I use the projector for something else while I prepare?</summary>
+      <p>Show › <em>Hide Audience Window</em> (<kbd>⇧⌘A</kbd>) takes the slides off the external display, so you can use it for other windows. The same command brings them back.</p>
+    </details>
+    <details>
+      <summary>Does my clicker work?</summary>
+      <p>Yes. Most clickers send Page Down and Page Up, or the arrow keys, and Lectern responds to them whichever of its windows is in front, even while you're editing notes.</p>
+    </details>
+    <details>
+      <summary>The notes are too small, or too narrow</summary>
+      <p>Press <kbd>+</kbd> or <kbd>−</kbd> to make the notes bigger or smaller. Drag the line between the current slide and the right column to make the notes wider, and the line between the next slide and the notes to make them taller. Lectern remembers both. Double-click a line to reset it.</p>
+    </details>
+    <details>
+      <summary>How does the timer work?</summary>
+      <p>View › <em>Show Timer</em> (<kbd>⌥⌘T</kbd>) shows or hides the timer next to the clock. <kbd>T</kbd> pauses or resumes it, and <kbd>⇧T</kbd> resets it.</p>
+    </details>
+
+    <h2 id="keys">Keyboard shortcuts</h2>
+    <table class="stack keys">
+      <thead><tr><th>Keys</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><kbd>→</kbd> <kbd>↓</kbd> <kbd>Page Down</kbd> <kbd>Space</kbd> <kbd>Return</kbd> <kbd>N</kbd></td><td data-label="Action">Next slide</td></tr>
+        <tr><td><kbd>←</kbd> <kbd>↑</kbd> <kbd>Page Up</kbd> <kbd>Delete</kbd> <kbd>P</kbd></td><td data-label="Action">Previous slide</td></tr>
+        <tr><td><kbd>Home</kbd> / <kbd>End</kbd></td><td data-label="Action">First / last slide</td></tr>
+        <tr><td>A number, then <kbd>Return</kbd></td><td data-label="Action">Go to that slide</td></tr>
+        <tr><td><kbd>B</kbd> or <kbd>.</kbd></td><td data-label="Action">Black screen (<kbd>W</kbd> or <kbd>,</kbd> for white)</td></tr>
+        <tr><td><kbd>+</kbd> / <kbd>−</kbd></td><td data-label="Action">Bigger / smaller notes</td></tr>
+        <tr><td><kbd>T</kbd> / <kbd>⇧T</kbd></td><td data-label="Action">Pause or resume / reset the timer</td></tr>
+        <tr><td><kbd>⌥⌘T</kbd></td><td data-label="Action">Show or hide the timer</td></tr>
+        <tr><td><kbd>F5</kbd> / <kbd>⇧F5</kbd></td><td data-label="Action">Restart from slide 1 / continue</td></tr>
+        <tr><td><kbd>⇧⌘D</kbd></td><td data-label="Action">Swap displays</td></tr>
+        <tr><td><kbd>⇧⌘A</kbd></td><td data-label="Action">Hide or show the audience window</td></tr>
+        <tr><td><kbd>⌘K</kbd> / <kbd>⇧⌘K</kbd></td><td data-label="Action">Ask Claude to change this slide / add slides after it</td></tr>
+        <tr><td><kbd>⌃⌘F</kbd></td><td data-label="Action">Full screen (presenter view)</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td data-label="Action">Leave full screen, else end the show</td></tr>
+      </tbody>
+    </table>
+    <p>The full list is under Help › <em>Keyboard Shortcuts</em> in the app.</p>
+
+    <h2 id="notes">Speaker notes</h2>
+    <details open>
+      <summary>How do I edit my notes?</summary>
+      <p>In a Presenter Deck deck, click into the notes and type, as in PowerPoint. This works during a show too. <kbd>⌘B</kbd>, <kbd>⌘I</kbd> and <kbd>⌘U</kbd> make text bold, italic or underlined, and <kbd>⌘Z</kbd> undoes. Type "- " at the start of a line for a bullet; Return continues the list, and Return on an empty bullet ends it. <kbd>Esc</kbd> or a click anywhere else finishes editing. Page Up and Page Down still change slides, so your clicker keeps working.</p>
+    </details>
+    <details>
+      <summary>Where are my notes saved?</summary>
+      <p>In the deck's own HTML file, as you pause typing, when you click away and when you change slides. Lectern replaces only that slide's notes, or adds them if the slide had none, and leaves the rest of the file exactly as it was.</p>
+    </details>
+    <details>
+      <summary>It says "Not saved"</summary>
+      <p>Lectern won't overwrite a deck it can't save safely. This happens if another app changed that slide's notes in the file since Lectern opened it, or if the file can't be written (for example, it's read-only or on a disk that was removed). Your text stays on screen. Copy it, reopen the deck, and paste it back.</p>
+    </details>
+    <details>
+      <summary>I can't type in the notes</summary>
+      <p>Notes in reveal.js and other HTML decks are read-only. Editing works in Presenter Deck decks.</p>
+    </details>
+
+    <h2 id="text">Editing slide text</h2>
+    <details open>
+      <summary>How do I fix a typo on a slide?</summary>
+      <p>Double-click the text on the current slide in the presenter view. It gets an amber outline. Type, then press Return to save or <kbd>Esc</kbd> to cancel. <kbd>⇧Return</kbd> adds a line break. The change goes into the deck file and shows on the projector straight away. This works during a show too.</p>
+    </details>
+    <details>
+      <summary>Which text can I edit?</summary>
+      <p>Hold <kbd>⌥</kbd> to outline everything on the current slide. Amber text can be edited. Grey dashed text can't; point at it and the tooltip says why. Lectern edits one heading, paragraph or list item at a time, as plain text, and formatting already in it stays. Text in charts and drawings (SVG), and text that a deck's script writes, can't be edited in place. For bigger changes, use Ask Claude.</p>
+    </details>
+
+    <h2 id="claude">Ask Claude</h2>
+    <details open>
+      <summary>How do I use it?</summary>
+      <p>Click <em>Ask Claude</em> in the presenter view's top bar (<kbd>⌘K</kbd>) to change the current slide, or use Show › <em>Ask Claude to Add Slides After This One…</em> (<kbd>⇧⌘K</kbd>). Describe the change, pick a model and effort, and click <em>Ask Claude</em>. When Claude finishes, the deck reloads at the changed slide, and you choose <em>Keep</em> or <em>Undo</em>.</p>
+      <p>The defaults are Opus and medium effort. Sonnet is quicker for simple changes, and high effort helps when reworking a whole slide. Lectern remembers your choice.</p>
+    </details>
+    <details>
+      <summary>What do I need?</summary>
+      <p>Claude Code, Anthropic's command-line tool, installed on your Mac and signed in with your Claude subscription. Ask Claude works with Presenter Deck decks. Lectern runs Claude Code under your own account, so it counts against your Claude plan's usage. It never uses an Anthropic API key, even if one is set on your Mac.</p>
+    </details>
+    <details>
+      <summary>It says "Claude Code isn't installed"</summary>
+      <p>Install Claude Code from <a href="https://claude.com/claude-code">claude.com/claude-code</a>, run <code>claude</code> once in Terminal and sign in with your Claude account, then try again. Lectern looks for <code>claude</code> in the usual install locations and on your shell's PATH.</p>
+    </details>
+    <details>
+      <summary>What does Claude see, and what can it change?</summary>
+      <ul>
+        <li>Claude works in a temporary folder on a copy of the current slide, with its speaker notes taken out, and the deck's styles. For context, it also gets the deck's title, the titles of its slides, the current slide's notes and the Presenter Deck spec. It never sees the deck file itself or the other slides' notes.</li>
+        <li>It can only read and write files in that folder: no shell, web or other tools. Your own Claude Code settings, hooks and plugins aren't loaded.</li>
+        <li>Lectern takes back only the slides. The changed slide gets your notes back word for word, and any notes Claude added to it are dropped. Lectern checks that every other slide is unchanged, backs the deck up, and only then saves it. New slides come with notes Claude wrote for them.</li>
+        <li><em>Undo</em> puts back the exact previous file. If the deck has changed since, Undo refuses and points you to the backup.</li>
+      </ul>
+    </details>
+    <details>
+      <summary>"Claude took too long" or "Claude couldn't finish"</summary>
+      <p>Lectern stops Claude after 8 minutes, and nothing in the deck changes. Try a smaller request, a lower effort or Sonnet. "Claude couldn't finish" shows what Claude Code reported, such as a usage limit or a sign-in problem. Run <code>claude</code> in Terminal to check.</p>
+    </details>
+
+    <h2 id="backups">Backups &amp; updates</h2>
+    <details open>
+      <summary>Where are the backups?</summary>
+      <p>Before a deck's first edit in a session, and before every Ask Claude change, Lectern copies the deck to <code>~/Library/Application Support/Lectern/Backups</code>. It keeps the 50 newest copies. To open the folder, press <kbd>⇧⌘G</kbd> in the Finder and paste the path. To restore a deck, copy a backup over it.</p>
+    </details>
+    <details>
+      <summary>How does Lectern update?</summary>
+      <p>Lectern checks for a new version about once a day and asks before installing it. To check now, choose Lectern › <em>Check for Updates…</em>. Each version's changes are in the <a href="https://github.com/victor-shammas/lectern/releases">release notes</a>.</p>
+    </details>
+    <details>
+      <summary>Does Lectern need an internet connection?</summary>
+      <p>No, unless your deck loads fonts or images from the web, or you use Ask Claude. Lectern itself only connects to check for updates.</p>
+    </details>
+
+    <h2 id="remove">Removing Lectern</h2>
+    <details open>
+      <summary>How do I remove Lectern completely?</summary>
+      <p>Quit Lectern and drag it from Applications to the Trash. To also delete its backups and settings, delete <code>~/Library/Application Support/Lectern</code> and <code>~/Library/Preferences/com.victorshammas.Lectern.plist</code>. If you installed the Claude skill, delete <code>~/.claude/skills/presenter-deck</code> too. Your decks aren't touched.</p>
+    </details>
+
+    <h2 id="contact">Contact</h2>
+    <p>Email <a href="mailto:contact+lectern@victorshammas.com?subject=Lectern%20support">contact+lectern@victorshammas.com</a>. It helps to include your macOS version, Lectern version (Lectern › About Lectern), and what kind of deck you're presenting. If a deck shows wrongly, attaching it helps, if you can share it.</p>
+
+    <p class="fineprint" style="margin-top:32px">Lectern is an independent app and is not affiliated with, endorsed by or sponsored by Anthropic.</p>
+  </div>
+</main>
+
+<section class="app-bar" aria-label="Apps by Victor Shammas">
+  <div class="wrap">
+    <div class="app-bar-head">
+      <p class="app-bar-title"><a href="https://victorshammas.com/apps/">Small, private apps by Victor Shammas</a></p>
+      <p class="app-bar-coffee">Enjoying one of these apps? <a href="https://buymeacoffee.com/victorshammas">Buy me a coffee</a>.</p>
+    </div>
+    <div class="app-tiles">
+      <a class="app-tile" href="https://victorshammas.com/plainview/"><img src="https://victorshammas.com/plainview/icon.png" alt="" width="44" height="44"><span><strong>Plainview</strong><small>A Markdown reader for the Mac</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/gaugeline/"><img src="https://victorshammas.com/gaugeline/icon.png" alt="" width="44" height="44"><span><strong>Gaugeline</strong><small>AI usage limits in your menu bar</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/quoth/"><img src="https://victorshammas.com/quoth/icon.png" alt="" width="44" height="44"><span><strong>Quoth</strong><small>Local voice transcription</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/staple/"><img src="https://victorshammas.com/staple/icon.png" alt="" width="44" height="44"><span><strong>Staple</strong><small>Substack, stapled together</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/claude-usage-meter/"><img src="https://victorshammas.com/claude-usage-meter/icon.png" alt="" width="44" height="44"><span><strong>Claude Usage Meter</strong><small>Claude limits, free and open source</small></span></a>
+      <a class="app-tile current" aria-current="page" href="https://victorshammas.com/lectern/"><img src="icon.png" alt="" width="44" height="44"><span><strong>Lectern</strong><small>A presenter view for HTML slides</small><em>You’re here</em></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:contact+lectern@victorshammas.com">Contact</a></nav>
+    <p>Claude and Claude Code are trademarks of Anthropic, PBC. © 2026 Victor Shammas</p>
+  </div>
+</footer>
+</body>
+</html>

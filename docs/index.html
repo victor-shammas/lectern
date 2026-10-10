@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lectern: a presenter view for HTML slides on your Mac</title>
+<meta name="description" content="Lectern presents HTML slide decks on your Mac with a presenter view like PowerPoint's: current and next slide, speaker notes, a clock and thumbnails. Works with clickers. Edit notes during the show. Free download for macOS 14 or later.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Lectern">
+<meta property="og:description" content="A presenter view for HTML slide decks on your Mac. The slides on the projector, your notes on your laptop.">
+<meta property="og:image" content="https://victorshammas.com/lectern/icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="30" height="30">Lectern</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features" class="hide-sm">Features</a>
+      <a href="#privacy" class="hide-sm">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <img class="hero-icon" src="icon.png" alt="Lectern app icon" width="96" height="96">
+        <h1>Present HTML slides with a real presenter view.</h1>
+        <p class="lede">Lectern puts your HTML slide deck fullscreen on the projector. On your Mac you see the current slide, the next one, your speaker notes and a clock, as in PowerPoint or Keynote.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://github.com/victor-shammas/lectern/releases/latest/download/Lectern.dmg">Download for Mac <small>Free</small></a>
+          <span class="fineprint">macOS 14 or later · Apple silicon · <a href="https://github.com/victor-shammas/lectern/releases/latest">Release notes</a></span>
+        </div>
+      </div>
+
+      <figure class="mock" aria-label="Illustration of Lectern's presenter view with a sample deck" role="img">
+        <div class="pv-top"><b>10:42</b><span class="pv-timer">12:08</span><span>Slide 4 of 7</span><span class="pv-ask">Ask Claude</span></div>
+        <div class="pv-main">
+          <div class="slide pv-current">
+            <div class="kicker">Field study</div>
+            <div class="title">Three things we learned</div>
+            <ul><li>Most people read the summary first</li><li>Long forms lose half their readers</li><li>Plain words beat jargon, every time</li></ul>
+          </div>
+          <div class="pv-side">
+            <div class="pv-next">
+              <p class="pv-label">Next</p>
+              <div class="slide"><div class="title">What we'll try next</div><ul><li>Shorter forms</li><li>A summary on page one</li></ul></div>
+            </div>
+            <div class="pv-notes">
+              <p><strong>Start with the survey.</strong></p>
+              <ul><li>412 replies in two weeks</li><li>Pause after the second point</li><li>Ask for questions here<span class="caret"></span></li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="pv-ribbon" aria-hidden="true"><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i></div>
+        <p class="demo">Sample deck</p>
+      </figure>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Everything you need at the front of the room.</h2>
+      <p class="section-lede">The audience sees the slides. You see what's coming, what to say and how long you've been talking.</p>
+      <div class="grid">
+        <div class="card"><h3>Presenter view</h3><p>The current slide, the next slide, your speaker notes, a clock and an optional timer, with a ribbon of thumbnails to jump anywhere. Drag the dividers to give the notes more room.</p></div>
+        <div class="card"><h3>Clickers and keys</h3><p>Your clicker works. So do the keys you know from PowerPoint and Keynote: arrows, Page Up and Down, B or W for a black or white screen, a number and Return to jump.</p></div>
+        <div class="card"><h3>Rehearse on one screen</h3><p>No projector? The audience view opens as a small window over the presenter view, so you can practise anywhere. Swap Displays and Hide Audience Window are a shortcut away.</p></div>
+        <div class="card"><h3>Edit notes as you go</h3><p>In Presenter Deck decks, click into the notes and type, even during the show. Bold, italic, underline and bullets. Lectern saves them into the deck's HTML file and changes only that slide's notes.</p></div>
+        <div class="card"><h3>Fix a typo on the slide</h3><p>Double-click a heading or a line of text on the current slide, fix it, press Return. The change is saved into the deck and shows on the projector straight away. Hold ⌥ to see what's editable.</p></div>
+        <div class="card"><h3>Ask Claude</h3><p>For bigger changes, ask Claude to rework the current slide or add slides after it. It runs Claude Code on your Mac, with your own Claude subscription. Then choose Keep or Undo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="section-lede">Lectern presents decks that are a single HTML file. It works best with decks that follow the Presenter Deck spec, which comes with the app as a Claude skill.</p>
+      <div class="steps">
+        <div class="card"><h3>Give Claude the skill</h3><p>Lectern › Claude Skill installs the Presenter Deck skill in Claude Code, saves it for Claude.ai, or copies it as a prompt for any other assistant.</p></div>
+        <div class="card"><h3>Ask for a deck</h3><p>Claude writes the slides and your speaker notes into one HTML file that Lectern presents exactly. reveal.js and other HTML decks play too, without the editing.</p></div>
+        <div class="card"><h3>Open it and present</h3><p>Connect the projector, TV or AirPlay display and open the deck. The slides go fullscreen on the external display; the presenter view stays on your Mac.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="claude">
+    <div class="wrap">
+      <h2>When Claude changes a slide</h2>
+      <p class="section-lede">Ask Claude works on one slide at a time, on a copy. Lectern checks the result before it touches your deck.</p>
+      <ul class="checks">
+        <li>Claude works on a copy of one slide, never your file</li>
+        <li>Your notes come back word for word</li>
+        <li>Lectern checks that every other slide is unchanged</li>
+        <li>A backup of the deck before every change</li>
+        <li>Keep the change, or Undo it</li>
+        <li>Your Claude subscription, never an API key</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band" id="privacy">
+    <div class="wrap">
+      <h2>Private by design</h2>
+      <p class="section-lede">There is no Lectern account and no Lectern server. Your decks and notes stay on your Mac.</p>
+      <ul class="checks">
+        <li>No accounts, no sign-in</li>
+        <li>No analytics, tracking or ads</li>
+        <li>Decks and notes stay on your Mac</li>
+        <li>Backups are kept on your Mac, too</li>
+        <li>Ask Claude sends nothing until you use it</li>
+        <li>Lectern itself only checks for updates</li>
+      </ul>
+      <p style="margin-top:22px"><a href="privacy.html">Read the full privacy policy</a></p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap narrow">
+      <h2>Requirements</h2>
+      <ul>
+        <li>macOS 14 Sonoma or later, on a Mac with Apple silicon</li>
+        <li>A second display for the show: a projector, a TV or an AirPlay display. One screen is enough to rehearse.</li>
+        <li>A deck in one HTML file: Presenter Deck decks, reveal.js decks or other HTML slide decks</li>
+        <li>For Ask Claude: Claude Code installed on your Mac and signed in with your Claude subscription</li>
+      </ul>
+      <p>Lectern is free. It checks for updates once a day and asks before installing one. Questions? See <a href="support.html">Support &amp; FAQ</a>.</p>
+    </div>
+  </section>
+</main>
+
+<section class="app-bar" aria-label="Apps by Victor Shammas">
+  <div class="wrap">
+    <div class="app-bar-head">
+      <p class="app-bar-title"><a href="https://victorshammas.com/apps/">Small, private apps by Victor Shammas</a></p>
+      <p class="app-bar-coffee">Enjoying one of these apps? <a href="https://buymeacoffee.com/victorshammas">Buy me a coffee</a>.</p>
+    </div>
+    <div class="app-tiles">
+      <a class="app-tile" href="https://victorshammas.com/plainview/"><img src="https://victorshammas.com/plainview/icon.png" alt="" width="44" height="44"><span><strong>Plainview</strong><small>A Markdown reader for the Mac</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/gaugeline/"><img src="https://victorshammas.com/gaugeline/icon.png" alt="" width="44" height="44"><span><strong>Gaugeline</strong><small>AI usage limits in your menu bar</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/quoth/"><img src="https://victorshammas.com/quoth/icon.png" alt="" width="44" height="44"><span><strong>Quoth</strong><small>Local voice transcription</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/staple/"><img src="https://victorshammas.com/staple/icon.png" alt="" width="44" height="44"><span><strong>Staple</strong><small>Substack, stapled together</small></span></a>
+      <a class="app-tile" href="https://victorshammas.com/claude-usage-meter/"><img src="https://victorshammas.com/claude-usage-meter/icon.png" alt="" width="44" height="44"><span><strong>Claude Usage Meter</strong><small>Claude limits, free and open source</small></span></a>
+      <a class="app-tile current" aria-current="page" href="https://victorshammas.com/lectern/"><img src="icon.png" alt="" width="44" height="44"><span><strong>Lectern</strong><small>A presenter view for HTML slides</small><em>You’re here</em></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="mailto:contact+lectern@victorshammas.com">Contact</a></nav>
+    <p>Lectern is an independent app. It is not affiliated with, endorsed by or sponsored by Anthropic, Microsoft or Apple. Claude and Claude Code are trademarks of Anthropic, PBC. PowerPoint is a trademark of Microsoft Corporation. Mac, Keynote and AirPlay are trademarks of Apple Inc.</p>
+    <p>© 2026 Victor Shammas</p>
+  </div>
+</footer>
+</body>
+</html>
