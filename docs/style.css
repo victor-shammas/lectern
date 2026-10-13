@@ -93,6 +93,8 @@ h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.08; letter-spacing: -.025
 }
 .btn:hover { opacity: .9; }
 .btn small { font-weight: 500; opacity: .75; }
+.btn-soon { background: transparent; color: var(--text); border: 1px solid var(--line); cursor: default; }
+.btn-soon:hover { opacity: 1; }
 .fineprint { color: var(--muted); font-size: 14px; }
 
 /* Presenter view mock (pure CSS, sample deck): the laptop screen during a show. */
