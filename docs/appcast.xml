@@ -4,17 +4,24 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Lectern</title>
         <item>
-            <title>1.1</title>
-            <pubDate>Sat, 10 Oct 2026 17:59:40 +0200</pubDate>
+            <title>1.2</title>
+            <pubDate>Tue, 13 Oct 2026 21:27:14 +0200</pubDate>
             <link>https://victorshammas.com/lectern/</link>
-            <sparkle:version>15</sparkle:version>
-            <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>1.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/victor-shammas/lectern/releases/download/v1.1/Lectern-1.1.zip" length="2244714" type="application/octet-stream" sparkle:edSignature="RVsZVERUdUuU2IUWRx1n2qItPIREtcZdZ8mLIWKxSN6wC+HDxfkp0jApr9WgyCbf4Rf9r8rXAXCt2cjRsBCJDQ=="></enclosure>
+            <description><![CDATA[<h2>Lectern 1.2</h2>
+<ul>
+  <li>Ask Claude no longer fails with “left 0” on slides whose speaker notes end right before the slide’s closing tag.</li>
+  <li>After Claude changes a slide, Keep and Undo now sit in the top bar, so you can look the slide over before deciding.</li>
+  <li>Better handling of decks saved with Windows line endings.</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/victor-shammas/lectern/releases/download/v1.2/Lectern-1.2.zip" length="2283910" type="application/octet-stream" sparkle:edSignature="0Vb3hxk8Fp63w1qaKOeLdaKj7IEXlLYrWFbiGknIljg2WTLAmS/IjKIOCWJog+EaD2t1S0R8PkAT3yhJtESvAg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 6mJhQU9glR7BcllUz4Xss9k3qCo9EfcjZr4e8ZFx/0mwSfZYQcLOpdu14EX4Db9dkbrlSfIvjBtL7VR6FEWbCg==
-length: 1176
+edSignature: I0JUplrg76IApRpLVqwEt3APgTHSABdUMn+nwrtpQKokO0m8PSHEP41fveuT1ZaeqSwbnJ34ira+T0ZRcXidDg==
+length: 1586
 -->
